@@ -22,6 +22,9 @@
 - 外观设置1-5为必填，不填则影响全站图片功能和侧栏功能
 - 外观设置多说二级域名为必填项，否则将影响全站的评论系统
 
+## 下载
+[点我](https://github.com/ShangJixin/Typecho-Theme-JiWater/releases)查看所有正式版本
+
 ## 版权
 - 本主题版权归机芯(尚寂新/ShangJixin/水师机芯/三道水师提督尚寂新)所有，请保留主题的版权标志，去除主题版权标志后恕不提供任何帮助
 - 本主题的诞生离不开HTML5UP-Future-Imperfect的支持
