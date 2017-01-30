@@ -7,3 +7,6 @@
 ![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)
 
 欢迎使用JiWater主题,JiWater是基于HTML5UP-Future-Imperfect制作的Typecho主题
+
+![介绍1](https://ww2.sinaimg.cn/large/a15b4afegy1fc8k4o7xfmj20wo0ledj7)
+![介绍2](https://ww2.sinaimg.cn/large/a15b4afegy1fc8k4o7xfmj20wo0ledj7)
