@@ -23,7 +23,7 @@
 - 外观设置多说二级域名为必填项，否则将影响全站的评论系统
 
 ## 下载
-[点我](https://github.com/ShangJixin/Typecho-Theme-JiWater/releases)查看所有正式版本
+- [点我](https://github.com/ShangJixin/Typecho-Theme-JiWater/releases)查看所有正式版本
 
 ## 版权
 - 本主题版权归机芯(尚寂新/ShangJixin/水师机芯/三道水师提督尚寂新)所有，请保留主题的版权标志，去除主题版权标志后恕不提供任何帮助
@@ -48,7 +48,7 @@
 - 添加pjax失败(对这玩意脑袋大)
 
 #### 2017-01-30 发布 1.0.0
-1. 基于HTML5UP-Future-Imperfect为模版制作主题,并削掉一部分内容
-1. 添加多说评论框代替原生评论(机芯对CSS投降)
-1. 美化浏览器进度条，粗面条变成细面条喽
-1. 新增一大堆BUG
+- 基于HTML5UP-Future-Imperfect为模版制作主题,并削掉一部分内容
+- 添加多说评论框代替原生评论(机芯对CSS投降)
+- 美化浏览器进度条，粗面条变成细面条喽
+- 新增一大堆BUG
