@@ -1,4 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+
+
+
 				<!-- 侧栏Sidebar -->
 					<section id="sidebar">
 
@@ -11,32 +14,12 @@
 								</header>
 							</section>
 
-
-							<section>
-								<h2>最新文章<h2>
-								<ul class="posts">
-								<?php $this->widget('Widget_Contents_Post_Recent')
-										->parse('
-									<li>
-										<article>
-											<header>
-												<h3><a class="fa fa-bookmark" href="{permalink}">&nbsp;{title}</a></h3>
-											</header>
-										</article>
-									</li>'
-									); ?>
-								</ul>
-							</section>
-							<section>
-								<h2>分类目录<h2>
-								<ul class="posts">
-									<li>
-										<article>
-											<header>
-												<h3><?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=posts'); ?></h3>
-											</header>
-										</article>
-									</li>
+						<!-- About -->
+							<section class="blurb">
+								<h2>关于本站</h2>
+								<p><?php $this->options->jiabout() ?></p>
+								<ul class="actions">
+									<li><a href="<?php $this->options->jiaboutlink() ?>" class="button">详细介绍</a></li>
 								</ul>
 							</section>
 							<section>
@@ -45,15 +28,6 @@
 								<?php while($tags->next()): ?>
 										<a rel="tag" href="<?php $tags->permalink(); ?>"><code><small><?php $tags->name(); ?></small></code></a>
 								<?php endwhile; ?>
-							</section>
-
-						<!-- About -->
-							<section class="blurb">
-								<h2>关于</h2>
-								<p><?php $this->options->jiabout() ?></p>
-								<ul class="actions">
-									<li><a href="<?php $this->options->jiaboutlink() ?>" class="button">详细介绍</a></li>
-								</ul>
 							</section>
 						<!-- Footer -->
 

@@ -66,20 +66,12 @@
 							</section>
 
 						<!-- Links -->
-							<section>
-								<ul class="links">
-								<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-								<?php while($pages->next()): ?>
-									<li>
-										<a href="<?php $pages->permalink(); ?>">
-											<h3 class="fa fa-th-list">&nbsp;<?php $pages->title(); ?></h3>
-
-										</a>
-									</li>
-									<?php endwhile; ?>
-								</ul>
-							</section>
-
+						<ul class="actions fit small">
+							<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+							<?php while($pages->next()): ?>
+							<li><a href="<?php $pages->permalink(); ?>" class="button fit small"><?php $pages->title(); ?></a></li>
+							<?php endwhile; ?>
+						</ul>
 						<!-- Actions -->
 							<section>
 								<ul class="actions vertical">

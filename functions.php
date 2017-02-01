@@ -22,8 +22,6 @@ function themeConfig($form) {
     $form->addInput($RSSlink);
 	$maillink = new Typecho_Widget_Helper_Form_Element_Text('maillink', NULL, NULL, _t('Footer-邮箱'), _t('填入你邮箱的地址，显示在Footer区，填法为“mailto:yourmail@xx.com”'));
     $form->addInput($maillink);
-	$duoshuoname = new Typecho_Widget_Helper_Form_Element_Text('duoshuoname', NULL, NULL, _t('多说二级域名'), _t('必须输入自己的，不要输入duoshuo.com'));
-    $form->addInput($duoshuoname);
 	$jifooter = new Typecho_Widget_Helper_Form_Element_Text('jifooter', NULL, NULL, _t('自定义Footer文字'), _t('可以输入友情链接网站统计什么的，可以用Html和js'));
     $form->addInput($jifooter);
 	

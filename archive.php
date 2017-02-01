@@ -15,20 +15,17 @@
 			<header>
 				<div class="title">
 					<h2><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
-					<p><?php $this->excerpt('233','...'); ?></p>
+					<p><i class="fa fa-archive" aria-hidden="true"></i>&nbsp;<?php $this->category(','); ?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;<a href='<?php $this->permalink() ?>#comment'><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a></p>
 				</div>
 				<div class="meta">
 					<time class="published" datetime="<?php $this->date('c'); ?>"><?php $this->date('F j, Y'); ?></time>
 					<a href="<?php $this->author->permalink(); ?>" class="author"><span class="name"><?php $this->author(); ?></span><img src="<?php $this->options->headUrl() ?>"/></a>
 				</div>
 				</header>
+				<p><?php $this->excerpt('233','...'); ?></p>
 				<footer>
 					<ul class="actions">
 						<li><a href="<?php $this->permalink() ?>" class="button big">继续阅读</a></li>
-					</ul>
-					<ul class="stats">
-						<li class="icon fa-archive"><?php $this->category(','); ?></li>
-						<li class="icon fa-comment"><a itemprop="discussionUrl" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a></li>
 					</ul>
 				</footer>
 			</article>
@@ -39,8 +36,12 @@
             </article>
         <?php endif; ?>
 
-<?php $this->pageNav('上一页', '下一页', 3, '...', 'wrapTag=ol&wrapClass=actions pagination&itemTag=links&textTag=links¤tClass=links&prevClass=button big previous&nextClass=button big next'); ?>
+<ul class="actions pagination">
+	<li class="button big"><?php $this->pageLink('上一页'); ?></li>
+	<li class="button big"><?php $this->pageLink('下一页','next'); ?>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+</ul>
     </div><!-- end #main -->
+
 
 	<?php $this->need('sidebar.php'); ?>
 	<?php $this->need('footer.php'); ?>
