@@ -55,5 +55,4 @@ $this->need('header.php'); ?>
 </div>	
 
 	
-<?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>  

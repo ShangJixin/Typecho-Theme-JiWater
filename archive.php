@@ -36,12 +36,13 @@
             </article>
         <?php endif; ?>
 
-<ul class="actions pagination">
-	<li class="button big"><?php $this->pageLink('上一页'); ?></li>
-	<li class="button big"><?php $this->pageLink('下一页','next'); ?>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<!-- 乱乱的翻页 --><!-- 代码来源:qqdie,略改 -->
+<ul>     
+<nav><?php $this->pageLink('<li class="button big previous">上一页</li>'); ?>
+<?php $this->pageLink('<li class="button big next">下一页</li>','next'); ?></nav>
 </ul>
+<!-- 翻页结束喽 -->
     </div><!-- end #main -->
 
 
-	<?php $this->need('sidebar.php'); ?>
 	<?php $this->need('footer.php'); ?>

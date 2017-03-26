@@ -1,7 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<div id='comment'>
-<hr />
-<div id='main'>
+<!-- 自定义评论样式模块开始 -->
 <?php function threadedComments($comments, $options) {
     $commentClass = '';
     if ($comments->authorId) {
@@ -11,12 +9,11 @@
             $commentClass .= ' comment-by-user';
         }
     }
- 
+
     $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
 ?>
 
-<div id='main' class="6u 12u$(medium)">
-<ul id="li-<?php $comments->theId(); ?>" class="comment-body<?php 
+<ul id="li-<?php $comments->theId(); ?>" class="posts comment-body<?php 
 if ($comments->levels > 0) {
     echo ' comment-child';
     $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -26,40 +23,49 @@ if ($comments->levels > 0) {
 $comments->alt(' comment-odd', ' comment-even');
 echo $commentClass;
 ?>">
+<li id="<?php $comments->theId(); ?>">
+<hr />
+<article>
+	<header>
+		<h3><?php $comments->author(); ?> <span class="comment-reply"><?php $comments->reply(); ?></span></h3>
+			<time class="published"><?php $comments->date('Y-m-d H:i'); ?></time>
+			<p><?php $comments->content(); ?></p>
+	</header>
+		<a href="#" class="image">
+<?php
+//头像CDN by Rich
+$host = 'https://cdn.v2ex.com'; //自定义头像CDN服务器
+$url = '/gravatar/'; //自定义头像目录,一般保持默认即可
+$size = '40'; //自定义头像大小
+$rating = Helper::options()->commentsAvatarRating;
+$hash = md5(strtolower($comments->mail));
+$avatar = $host . $url . $hash . '?s=' . $size . '&r=' . $rating . '&d=';
+?>
+<img class="bsavatar" src="<?php echo $avatar ?>"></a>
+</article>
 
-<h1>Ⅲ <?php $comments->author(); ?></h1><span class="image left"><?php $comments->gravatar('40', ''); ?></span>
-<h4><?php $comments->date('Y-m-d H:i'); ?> <?php $comments->reply(); ?></h4>
-<small><?php $comments->content(); ?></small>
-	
-	
+
+
+
+</li>
 <?php if ($comments->children) { ?>
     <div class="comment-children">
+<ol>
+<blockquote>
         <?php $comments->threadedComments($options); ?>
+</blockquote>
+</ol>
     </div>
 <?php } ?>
 </ul>
-</div>
 <?php } ?>
-
-<!-- 小小分割线 -->
-    <?php $this->comments()->to($comments); ?>
-	<h3><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
-    <?php if ($comments->have()): ?>
-	
-
-    <?php $comments->listComments(); ?>
-
-    <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
-    
-    <?php endif; ?>
-
-    <?php if($this->allow('comment')): ?>
+<!-- 模块结束 评论开始 -->
+<div id="comments">
+<?php $this->comments()->to($comments); ?>
+        <?php if($this->allow('comment')): ?>
     <div id="<?php $this->respondId(); ?>" class="respond">
-        <div class="cancel-comment-reply">
-        <?php $comments->cancelReply(); ?>
-        </div>
 <hr />    
-    	<h3 id="response"><?php _e('添加新评论'); ?></h3>
+    	<h3 id="response"><?php _e('添加新评论'); ?> <small><?php $comments->cancelReply(); ?></small></h3>
     	<form method="post" action="<?php $this->commentUrl() ?>">
 		<div class="row uniform">	
 			<div class="6u 12u$(xsmall)">
@@ -97,6 +103,13 @@ echo $commentClass;
     </div>
     <?php else: ?>
     <h3><?php _e('评论已关闭'); ?></h3>
+    <?php endif; ?>
+    <?php if ($comments->have()): ?>
+    
+    <?php $comments->listComments(); ?>
+
+    <div align="center"><?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?></div>
+    
     <?php endif; ?>
 
 </div>

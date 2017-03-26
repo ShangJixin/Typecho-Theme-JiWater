@@ -8,10 +8,6 @@ function themeConfig($form) {
     $form->addInput($jiname);
     $jijianjie = new Typecho_Widget_Helper_Form_Element_Text('jijianjie', NULL, NULL, _t('博客简介'), _t('一句话即可，生成在大标题的下面，可以使用html标签'));
     $form->addInput($jijianjie);
-	$jiabout = new Typecho_Widget_Helper_Form_Element_Text('jiabout', NULL, NULL, _t('关于博客'), _t('100字左右(总之短点)，显示在footer上面，简短一个大概述就行'));
-    $form->addInput($jiabout);
-    $jiaboutlink = new Typecho_Widget_Helper_Form_Element_Text('jiaboutlink', NULL, NULL, _t('关于地址'), _t('“详细介绍”的指向地址，生成在footer的上面，推荐去后台新增“关于”页面，然后指向该页面地址'));
-    $form->addInput($jiaboutlink);
 	$githublink = new Typecho_Widget_Helper_Form_Element_Text('githublink', NULL, NULL, _t('Footer-Github'), _t('填入你github的地址，显示在Footer区'));
     $form->addInput($githublink);
 	$weibolink = new Typecho_Widget_Helper_Form_Element_Text('weibolink', NULL, NULL, _t('Footer-WeiBo'), _t('填入你微博的地址，显示在Footer区'));
@@ -24,7 +20,10 @@ function themeConfig($form) {
     $form->addInput($maillink);
 	$jifooter = new Typecho_Widget_Helper_Form_Element_Text('jifooter', NULL, NULL, _t('自定义Footer文字'), _t('可以输入友情链接网站统计什么的，可以用Html和js'));
     $form->addInput($jifooter);
-	
+	$jiback = new Typecho_Widget_Helper_Form_Element_Text('jiback', NULL, NULL, _t('自定义背景图片'), _t('不填则无 前面需要加http或https或//或者填绝对路径'));
+    $form->addInput($jiback);
+	$titleintro = new Typecho_Widget_Helper_Form_Element_Text('titleintro', NULL, NULL, _t('网站副标题'), _t('只会在index显示 不要太长 效果：XX博客 - 副标题'));
+    $form->addInput($titleintro);
 	
 	
 	
