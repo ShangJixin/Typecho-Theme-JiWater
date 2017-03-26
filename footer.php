@@ -24,7 +24,7 @@
 	border-radius: 3px;
 	background-color: #c1c1c1
 	}
-	<style>
+	</style>
 
 
 
