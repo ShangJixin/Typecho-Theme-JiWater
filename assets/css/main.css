@@ -471,62 +471,7 @@
 		.\31 1u\24\28xlarge\29 + *,
 		.\31 0u\24\28xlarge\29 + *,
 		.\39 u\24\28xlarge\29 + *,
-		.\38 u\24\28xlarge\29 + *,
-		.\37 u\24\28xlarge\29 + *,
-		.\36 u\24\28xlarge\29 + *,
-		.\35 u\24\28xlarge\29 + *,
-		.\34 u\24\28xlarge\29 + *,
-		.\33 u\24\28xlarge\29 + *,
-		.\32 u\24\28xlarge\29 + *,
-		.\31 u\24\28xlarge\29 + * {
-			clear: left;
-		}
 
-		.\-11u\28xlarge\29 {
-			margin-left: 91.66667%;
-		}
-
-		.\-10u\28xlarge\29 {
-			margin-left: 83.33333%;
-		}
-
-		.\-9u\28xlarge\29 {
-			margin-left: 75%;
-		}
-
-		.\-8u\28xlarge\29 {
-			margin-left: 66.66667%;
-		}
-
-		.\-7u\28xlarge\29 {
-			margin-left: 58.33333%;
-		}
-
-		.\-6u\28xlarge\29 {
-			margin-left: 50%;
-		}
-
-		.\-5u\28xlarge\29 {
-			margin-left: 41.66667%;
-		}
-
-		.\-4u\28xlarge\29 {
-			margin-left: 33.33333%;
-		}
-
-		.\-3u\28xlarge\29 {
-			margin-left: 25%;
-		}
-
-		.\-2u\28xlarge\29 {
-			margin-left: 16.66667%;
-		}
-
-		.\-1u\28xlarge\29 {
-			margin-left: 8.33333%;
-		}
-
-	}
 
 	@media screen and (max-width: 1280px) {
 
@@ -1431,13 +1376,7 @@
 		line-height: 1.75;
 	}
 
-		@media screen and (max-width: 1680px) {
 
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-
-		}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3170,13 +3109,7 @@
 			opacity: 0.15;
 		}
 
-		@media screen and (max-width: 1680px) {
-
-			#wrapper {
-				padding: 3em;
-			}
-
-		}
+		
 
 		@media screen and (max-width: 1280px) {
 
