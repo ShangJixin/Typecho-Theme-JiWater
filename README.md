@@ -19,6 +19,7 @@
 - 下载好压缩包后，请将解压后的文件夹重命名为'JiWater'后再启用主题
 - 主题使用之前，请去后台设置外观填写必要的东西
 - 外观设置1-5为必填，不填则影响全站图片功能和侧栏功能
+- 新建页面 并选择“文章归档”页面 页面内不用填写东西 发布之后会发现多出来了个文章归档页面！
 
 ## 下载
 - [点我](https://github.com/ShangJixin/Typecho-Theme-JiWater/releases)查看所有正式版本
@@ -35,18 +36,4 @@
 
 ## 日志
 
-
-#### 2017-02-01 更新 1.1.0
-- 去除sidebar的文章列表
-- 优化index.php文章列表的样式
-- 弃用多说，全新原生评论大更新
-- 新增文章归档页面(需要到后台自行创建页面，然后选择文章归档模版)
-- 翻页按钮改善
-- 新增一系列BUG
-- 添加pjax失败(对这玩意脑袋大)
-
-#### 2017-01-30 发布 1.0.0
-- 基于HTML5UP-Future-Imperfect为模版制作主题,并削掉一部分内容
-- 添加多说评论框代替原生评论(机芯对CSS投降)
-- 美化浏览器进度条，粗面条变成细面条喽
-- 新增一大堆BUG
+> [https://github.com/ShangJixin/Typecho-Theme-JiWater/releases](https://github.com/ShangJixin/Typecho-Theme-JiWater/releases)
