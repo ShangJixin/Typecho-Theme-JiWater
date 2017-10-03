@@ -8,6 +8,15 @@
 
 欢迎使用JiWater主题,JiWater是基于HTML5UP-Future-Imperfect制作的Typecho主题
 
+## 编辑文章时不同的地方
+
+'''
+<span class="image featured">
+    <img src="图片链接" alt="描述" />
+</span>
+'''
+插入图片时请按照上述方法添加 否则会出现图片无法自适应的BUG(2017.10.03 update)
+
 ![介绍1](https://ww2.sinaimg.cn/large/a15b4afegy1fc8k4o7xfmj20wo0ledj7)
 ![介绍2](https://ww2.sinaimg.cn/large/a15b4afegy1fc8k4poun3j20wo0le782)
 
