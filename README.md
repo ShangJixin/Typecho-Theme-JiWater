@@ -10,7 +10,7 @@
 
 ## 编辑文章时不同的地方
 
-```css
+```html
 <span class="image featured">
     <img src="图片链接" alt="描述" />
 </span>
